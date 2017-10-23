@@ -58,10 +58,11 @@ public class simulador {
     
     public boolean validador(String Rut){
         Rut=Rut.replaceAll("[^K-Kk-k0-9]", "");//Reemplaza todo lo que no sea numeros del 0 al 9 o que no sea K o k
-        if(Rut.length()==0){
+        int largoRut = Rut.length();
+        if(largoRut ==0){
             Rut="1";
         }
-        for (int i = 0; i < Rut.length()-1; i++) {
+        for (int i = 0; i < largoRut-1; i++) {
             if((Rut.charAt(i)=='K')||(Rut.charAt(i)=='k')){
                 Rut="1";
             }
@@ -121,11 +122,5 @@ public class simulador {
         else{
             return false;
         }
-    } 
-    
-    public boolean simularCredito(String nombre,String rut,String monto,String cuotas,String fecha){
-        
-    return true;
-}
-    
+    }    
 }
